@@ -1,4 +1,4 @@
-function ft_bench_01_timelockanalysis_03
+function ft_bench_01_timelockanalysis_02a
 % Benchmark ft_timelockanalysis (variant 3).
 %
 % Based on ft_bench_01_timelockanalysis_02, but with cfg.covariance        = 'yes';

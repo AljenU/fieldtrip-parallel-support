@@ -1,5 +1,5 @@
 function ft_bench_04_networkanalysis_02()
-% function test_tutorial_networkanalysis(datadirs)
+% based on test_tutorial_networkanalysis_new
 
     % WALLTIME 00:30:00
     % MEM 10gb
@@ -377,20 +377,4 @@ function ft_bench_04_networkanalysis_02()
     network_full_low  = ft_networkanalysis(cfg,source_conn_low);
     network_parc_high = ft_networkanalysis(cfg,parc_conn_high);
     network_parc_low  = ft_networkanalysis(cfg,parc_conn_low);
-    
-    cfg               = [];
-    cfg.method        = 'surface';
-    cfg.funparameter  = 'degrees';
-    cfg.funcolormap   = 'jet';
-    cfg.location      = 'max';
-    cfg.funparameter  = 'degrees';
-    figure; ft_sourceplot(cfg, network_full_high);
-    view([-150 30]);
-    figure; ft_sourceplot(cfg, network_full_low);
-    view([-150 30]);
-    
-    figure; ft_sourceplot(cfg, network_parc_high);
-    view([-150 30]);
-    figure; ft_sourceplot(cfg, network_parc_low);
-    view([-150 30]);
     

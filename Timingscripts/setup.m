@@ -6,7 +6,7 @@ addpath(fullfile(fpsFolder, 'Mcode'));
 
 % Add fieldtrip to path
 % Assume next to fps folder
-addpath(fullfile(fpsFolder, '..', 'fieldtrip');
+addpath(fullfile(fpsFolder, '..', 'fieldtrip'));
 
 % Set the ft_tut_datadir
 % TODO: one datadir at the 'ftp' level, and the test or tutorial or workshop part added inside the functions

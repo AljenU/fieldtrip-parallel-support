@@ -5,7 +5,7 @@ function ft_ex_11_ica_remove_eog_artifacts
 
 % preprocessing of example dataset
 cfg = [];
-cfg.dataset            = fullfile(ft_tut_datadir, 'ArtifactMEG', 'ArtifactMEG.ds');
+cfg.dataset            = fullfile(ft_tut_datadir(), 'ArtifactMEG', 'ArtifactMEG.ds');
 cfg.trialdef.eventtype = 'trial';
 cfg = ft_definetrial(cfg);
 

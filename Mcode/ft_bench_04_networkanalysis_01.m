@@ -1,5 +1,5 @@
 function ft_bench_04_networkanalysis_01
-    % test_ft_networkanalysis
+    % based on test_ft_networkanalysis
 
     % MEM 2gb
     % WALLTIME 00:10:00
@@ -40,7 +40,5 @@ function ft_bench_04_networkanalysis_01
     cfg.method    = 'degrees';
     stat7 = ft_networkanalysis(cfg, tmp);
     stat8 = ft_networkanalysis(cfg, data);
-    
-    save('before.mat')
     
     end
