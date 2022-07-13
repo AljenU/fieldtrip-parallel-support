@@ -16,6 +16,10 @@ ft_tut_workshopdir('D:\FieldTripData\workshop')
 % Put an input() function on the path that always responds yes
 addpath(fullfile(parentFolder, 'override_functions'));
 
+% call ft_defaults, so the full path has been set, before starting the
+% parallel pool
+ft_defaults();
+
 % Set what should be the default parallel profile
 % parallel.defaultClusterProfile('local')
 

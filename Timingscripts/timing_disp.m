@@ -19,6 +19,7 @@ for fieldname = fields_top
             alltables.(fieldname{1}) = thistable;
         end
     end
+    disp(fieldname{1})
     disp(alltables.(fieldname{1}))
 end
 
