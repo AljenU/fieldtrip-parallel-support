@@ -1,3 +1,52 @@
+% Required additional files to be able to run these functions:
+% - The fieldtrip code itself, from https://github.com/fieldtrip/fieldtrip
+% - Some of the fieldtrip 'ftp' data, available at https://download.fieldtriptoolbox.org/. Not all
+%   of the data is needed, however the ft_tut_datadir and ft_tut_workshopdir functions do expect
+%   that for the data that has been downloaded, the folder structure is the same as on the server
+%
+% The expected folder structure for a checkout of this repository relative to the checkout of https://github.com/fieldtrip/fieldtrip
+%
+% somerootfolder
+% |___fieldtrip-parallel-support
+% |   |   README.md
+% |   |   ...
+% |   |
+% |   |___Mcode
+% |   |   |   ft_tut_datadir.m
+% |   |   |   ...
+% |   |
+% |   |___Timingscripts
+% |       |   setup.m (this file)
+% |       |   ...
+% |
+% |___fieldtrip
+%     |   ft_defaults.m
+%     |   ...
+%
+% The expected folder structure for the data downloaded from https://download.fieldtriptoolbox.org/
+%
+% someotherrootfolder
+% |___tutorial
+% |   |___sensor_analysis
+% |   |   |   subjectK.mat
+% |   |
+% |   |___network_analysis
+% |   |   |   comp.mat
+% |   |   |   ...
+% |   | 
+% |   |   ...
+% |
+% |___test
+% |   |___ctf
+% |   |   |   SubjectRest.ds
+% |   |   |   ...
+% |   |
+% |   |   ...
+% |
+% |___workshop
+%     |   ...
+%
+
 parentFolder = fileparts(mfilename('fullpath'));
 fpsFolder = fileparts(parentFolder);
 
