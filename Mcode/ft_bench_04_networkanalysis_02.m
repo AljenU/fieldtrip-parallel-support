@@ -26,7 +26,7 @@ function ft_bench_04_networkanalysis_02()
     data       = ft_preprocessing(cfg, data);
     
     datadir = datadirs{2};
-    cd(datadir);
+    oldpwd = cd(datadir);
     
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % BYPASS THE INTERACTIVE PART, DECLARE TRIALS 38 91 153 AS BAD
@@ -377,4 +377,6 @@ function ft_bench_04_networkanalysis_02()
     network_full_low  = ft_networkanalysis(cfg,source_conn_low);
     network_parc_high = ft_networkanalysis(cfg,parc_conn_high);
     network_parc_low  = ft_networkanalysis(cfg,parc_conn_low);
+
+    cd(oldpwd);
     
