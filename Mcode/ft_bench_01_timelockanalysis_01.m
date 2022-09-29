@@ -77,10 +77,12 @@ t0 = tic;
 
 cfg = [];
 cfg.trials = ix_task1;
+save_input(cfg,data)
 task1 = ft_timelockanalysis(cfg, data);
 
 cfg = [];
 cfg.trials = ix_task2;
+save_input(cfg,data)
 task2 = ft_timelockanalysis(cfg, data);
 
 te = toc(t0);

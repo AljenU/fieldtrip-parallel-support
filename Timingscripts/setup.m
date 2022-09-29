@@ -48,6 +48,7 @@
 %
 
 parentFolder = fileparts(mfilename('fullpath'));
+addpath(parentFolder);
 fpsFolder = fileparts(parentFolder);
 
 % Add tutorial functions to path
@@ -59,6 +60,8 @@ addpath(fullfile(fpsFolder, '..', 'fieldtrip'));
 
 % Set the ft_tut_datadir
 % TODO: one datadir at the 'ftp' level, and the test or tutorial or workshop part added inside the functions
+% NOTE: the save_input function assumes that the timingscripts_mat_input
+% directory will be next to the ft_tut_datadir
 ft_tut_datadir('D:\FieldTripData\tutorial')
 ft_tut_workshopdir('D:\FieldTripData\workshop')
 

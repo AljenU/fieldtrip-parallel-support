@@ -79,14 +79,17 @@ cfg.output = 'fourier';
 cfg.foilim = [2 100];
 cfg.pad    = 1;
 cfg.tapsmofrq = 3;
+save_input(cfg,data);
 freq       = ft_freqanalysis(cfg, data);
 
 cfg.output = 'pow';
 cfg.keeptrials = 'yes';
+save_input(cfg,data);
 freqp      = ft_freqanalysis(cfg, data);
 
 cfg.output = 'powandcsd';
 cfg.channelcmb = ft_channelcombination([data.label(1) {'all'};data.label(2) {'all'}], data.label);
+save_input(cfg,data);
 freqc      = ft_freqanalysis(cfg, data);
 
 cfg        = [];
@@ -97,6 +100,7 @@ cfg.t_ftimwin = ones(1,numel(cfg.foi)).*0.2;
 cfg.taper  = 'hanning';
 cfg.output = 'pow';
 cfg.keeptrials = 'yes';
+save_input(cfg,data);
 freqtf     = ft_freqanalysis(cfg, data);
 
 % remove cfg because it has info on current time

@@ -51,10 +51,12 @@ t0 = tic;
 
 cfg = [];
 cfg.trials          = ix_standard;
+save_input(cfg,data_MEG_filt)
 ERF_standard        = ft_timelockanalysis(cfg,data_MEG_filt);
 
 cfg = [];
 cfg.trials          = ix_oddball;
+save_input(cfg,data_MEG_filt)
 ERF_oddball         = ft_timelockanalysis(cfg,data_MEG_filt);
 
 te = toc(t0);

@@ -48,6 +48,7 @@ cfg.taper        = 'hanning';
 cfg.foi          = 2:2:30;                         % analysis 2 to 30 Hz in steps of 2 Hz
 cfg.t_ftimwin    = ones(length(cfg.foi),1).*0.5;   % length of time window = 0.5 sec
 cfg.toi          = -0.5:0.05:1.5;                  % time window "slides" from -0.5 to 1.5 sec in steps of 0.05 sec (50 ms)
+save_input(cfg,dataFIC);
 TFRhann = ft_freqanalysis(cfg, dataFIC);
 
 te = toc(t0);
@@ -65,6 +66,7 @@ cfg.taper        = 'hanning';
 cfg.foi          = 2:1:30;
 cfg.t_ftimwin    = 7./cfg.foi;  % 7 cycles per time window
 cfg.toi          = -0.5:0.05:1.5;
+save_input(cfg,dataFIC);
 TFRhann7 = ft_freqanalysis(cfg, dataFIC);
 
 te = toc(t0);
@@ -82,6 +84,7 @@ cfg.foi        = 1:2:30;
 cfg.t_ftimwin  = 5./cfg.foi;
 cfg.tapsmofrq  = 0.4 *cfg.foi;
 cfg.toi        = -0.5:0.05:1.5;
+save_input(cfg,dataFIC);
 TFRmult = ft_freqanalysis(cfg, dataFIC);
 
 te = toc(t0);
@@ -98,6 +101,7 @@ cfg.width      = 7;
 cfg.output     = 'pow';
 cfg.foi        = 1:2:30;
 cfg.toi        = -0.5:0.05:1.5;
+save_input(cfg,dataFIC);
 TFRwave = ft_freqanalysis(cfg, dataFIC);
 
 te = toc(t0);

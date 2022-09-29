@@ -26,6 +26,8 @@ function ft_bench_04_networkanalysis_01
     cfg.parameter = 'cohspctrm';
     
     cfg.method    = 'assortativity';
+    save_input(cfg,tmp)
+    save_input(cfg,data)
     stat1 = ft_networkanalysis(cfg, tmp);
     stat2 = ft_networkanalysis(cfg, data);
     

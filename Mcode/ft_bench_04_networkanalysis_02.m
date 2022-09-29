@@ -310,6 +310,8 @@ function ft_bench_04_networkanalysis_02()
     cfg.method    = 'degrees';
     cfg.parameter = 'cohspctrm';
     cfg.threshold = .1;
+    save_input(cfg,source_conn)
+    save_input(cfg,parc_conn)
     network_full = ft_networkanalysis(cfg,source_conn);
     network_parc = ft_networkanalysis(cfg,parc_conn);
     
@@ -373,6 +375,10 @@ function ft_bench_04_networkanalysis_02()
     cfg.method    = 'degrees';
     cfg.parameter = 'cohspctrm';
     cfg.threshold = .1;
+    save_input(cfg,source_conn_high)
+    save_input(cfg,source_conn_low)
+    save_input(cfg,parc_conn_high)
+    save_input(cfg,parc_conn_low)
     network_full_high = ft_networkanalysis(cfg,source_conn_high);
     network_full_low  = ft_networkanalysis(cfg,source_conn_low);
     network_parc_high = ft_networkanalysis(cfg,parc_conn_high);

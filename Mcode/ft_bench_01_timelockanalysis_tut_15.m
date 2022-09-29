@@ -31,6 +31,7 @@ data = ft_appenddata(cfg, data_left, data_right);
 cfg                 = [];
 cfg.covariance        = 'yes';
 cfg.channel         = 'MEG';
+save_input(cfg,data)
 tl                  = ft_timelockanalysis(cfg, data);
 
 % Visualization
@@ -56,6 +57,7 @@ data_planar         = ft_megplanar(cfg, data);
 cfg                 = [];
 cfg.covariance        = 'yes';
 cfg.channel         = 'MEG';
+save_input(cfg,data_planar)
 tl_planar           = ft_timelockanalysis(cfg, data_planar);
 
 end

@@ -24,6 +24,7 @@ function ft_bench_02_freqanalysis_02()
     cfg.method = 'mtmfft';
     cfg.taper = 'hanning';
     cfg.foilim = [4 30];
+    save_input(cfg,data);
     freq = ft_freqanalysis(cfg, data);
     
 end
