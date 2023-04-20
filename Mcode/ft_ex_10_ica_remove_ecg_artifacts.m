@@ -22,7 +22,7 @@ data = ft_preprocessing(cfg);
 % split the ECG and MEG datasets, since ICA will be performed on MEG data but not on ECG channel
 % 1 - ECG dataset
 cfg              = [];
-cfg.channel      = {'EEG'};
+cfg.channel      = {'EEG058'};
 ecg              = ft_selectdata(cfg, data);
 ecg.label{:}     = 'ECG'; % for clarity and consistency rename the label of the ECG channel
 % 2 - MEG dataset

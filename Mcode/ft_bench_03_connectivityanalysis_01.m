@@ -28,6 +28,7 @@ cfg.foilim          = [5 100];
 cfg.keeptrials      = 'yes';
 cfg.channel         = {'MEG' 'EMGlft' 'EMGrgt'};
 cfg.channelcmb      = {'MEG' 'EMGlft'; 'MEG' 'EMGrgt'};
+save_input(cfg,data_stim);
 freq_csd            = ft_freqanalysis(cfg, data_stim);
 
 %% Benchmark

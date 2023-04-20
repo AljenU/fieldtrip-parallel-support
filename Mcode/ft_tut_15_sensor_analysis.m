@@ -92,6 +92,7 @@ cfg.keeptrials      = 'no';
 % pad trials to integer number of seconds, this speeds up the analysis
 % and results in a neatly spaced frequency axis
 cfg.pad             = 2;
+save_input(cfg,data_small);
 freq                = ft_freqanalysis(cfg, data_small);
 
 cfg                 = [];
@@ -127,6 +128,7 @@ cfg.foilim          = [5 100];
 cfg.keeptrials      = 'yes';
 cfg.channel         = {'MEG' 'EMGlft' 'EMGrgt'};
 cfg.channelcmb      = {'MEG' 'EMGlft'; 'MEG' 'EMGrgt'};
+save_input(cfg,data_stim);
 freq_csd            = ft_freqanalysis(cfg, data_stim);
 
 cfg                 = [];

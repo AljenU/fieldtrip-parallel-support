@@ -1,7 +1,8 @@
-function ft_bench_01_timelockanalysis_02
-% Benchmark ft_timelockanalysis (variant 2).
+function ft_bench_01_timelockanalysis_02a
+% Benchmark ft_timelockanalysis (variant 3).
 %
-% Based on ft_tut_12_preprocessing_combined_meg_eeg.
+% Based on ft_bench_01_timelockanalysis_02, but with cfg.covariance        = 'yes';
+% This so the loop is actually triggered.
 
 %% Setup
 
@@ -50,11 +51,13 @@ ix_oddball = find(data_MEG_filt.trialinfo(:,1) == 2);
 t0 = tic;
 
 cfg = [];
+cfg.covariance        = 'yes';
 cfg.trials          = ix_standard;
 save_input(cfg,data_MEG_filt)
 ERF_standard        = ft_timelockanalysis(cfg,data_MEG_filt);
 
 cfg = [];
+cfg.covariance        = 'yes';
 cfg.trials          = ix_oddball;
 save_input(cfg,data_MEG_filt)
 ERF_oddball         = ft_timelockanalysis(cfg,data_MEG_filt);

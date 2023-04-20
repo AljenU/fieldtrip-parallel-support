@@ -1,6 +1,7 @@
-function ft_bench_01_timelockanalysis_01
+function ft_bench_01_timelockanalysis_01a
 % Benchmark ft_timelockanalysis (variant 1).
 %
+% Based on ft_bench_01_timelockanalysis_01, but with cfg.covariance        = 'yes';
 % Based on ft_tut_11_preprocessing_erp.
 
 %% Setup
@@ -76,11 +77,13 @@ ix_task2 = find(data.trialinfo==2);
 t0 = tic;
 
 cfg = [];
+cfg.covariance        = 'yes';
 cfg.trials = ix_task1;
 save_input(cfg,data)
 task1 = ft_timelockanalysis(cfg, data);
 
 cfg = [];
+cfg.covariance        = 'yes';
 cfg.trials = ix_task2;
 save_input(cfg,data)
 task2 = ft_timelockanalysis(cfg, data);
